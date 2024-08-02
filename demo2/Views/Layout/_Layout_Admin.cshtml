@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <!-- Bootstrap CSS -->
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Fonts -->
+    <link href="~/TemplateAdmin/assets/fonts/line-icons.css" rel="stylesheet" />
+    <!--Morris Chart CSS -->
+    <link href="~/TemplateAdmin/assets/plugins/morris/morris.css" rel="stylesheet" />
+    <!-- Main Style -->
+    <link href="~/TemplateAdmin/assets/css/main.css" rel="stylesheet" />
+    <!-- Responsive Style -->
+    <link href="~/TemplateAdmin/assets/css/responsive.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="app header-default side-nav-dark">
+        <div class="layout">
+            <!-- Header START -->
+            
+            <!-- Header END -->
+            <!-- Side Nav START -->
+            <div class="side-nav expand-lg">
+                <div class="side-nav-inner">
+                    <ul class="side-nav-menu">
+                        <li class="side-nav-header">
+                            <span>Navigation</span>
+                        </li>
+                        <li class="nav-item dropdown open">
+                            <a href="#" class="dropdown-toggle">
+                                <span class="icon-holder">
+                                    <i class="lni-dashboard"></i>
+                                </span>
+                                <span class="title">Quản lý</span>
+                                <span class="arrow">
+                                    <i class="lni-chevron-right"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu sub-down">
+                                <li class="active">
+                                    <a href="@Url.Action("Index","QuanLySanPham")">Quản lý sách</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Side Nav END -->
+            <!-- Page Container START -->
+            <div class="page-container">
+                @RenderBody()
+                <!-- Content Wrapper END -->
+                <!-- Footer START -->
+                <footer class="content-footer">
+                    <div class="footer">
+                        <div class="copyright">
+                            <span class="go-right">
+                                <a href="" class="text-gray">Term &amp; Conditions</a>
+                                <a href="" class="text-gray">Privacy &amp; Policy</a>
+                            </span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- Footer END -->
+            </div>
+            <!-- Page Container END -->
+        </div>
+    </div>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader" id="loader-1"></div>
+    </div>
+    <!-- End Preloader -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="~/TemplateAdmin/assets/js/jquery-min.js"></script>
+    <script src="~/TemplateAdmin/assets/js/popper.min.js"></script>
+    <script src="~/TemplateAdmin/assets/js/bootstrap.min.js"></script>
+    <script src="~/TemplateAdmin/assets/js/jquery.app.js"></script>
+    <script src="~/TemplateAdmin/assets/js/main.js"></script>
+    <!--Morris Chart-->
+    <script src="~/TemplateAdmin/assets/plugins/morris/morris.min.js"></script>
+    <script src="~/TemplateAdmin/assets/plugins/raphael/raphael-min.js"></script>
+    <script src="~/TemplateAdmin/assets/js/dashborad1.js"></script>
+</body>
+</html>

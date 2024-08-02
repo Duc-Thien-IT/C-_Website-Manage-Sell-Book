@@ -1,0 +1,85 @@
+.container_top {
+    margin: 15px 100px;
+    background-color: #EEEEEE;
+}
+
+.container_top > a {
+    text-decoration: none;
+}
+
+.container_top > a,p {
+    color: black;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container_bottom {
+    display: flex;
+    margin-top: 0px;
+}
+
+.container_bottom_left {
+    padding: 6px;
+    margin: 0 10px 10px 100px;
+    background-color: #EEEEEE;
+    width: 240px;
+}
+
+.container_bottom_left_product, .container_bottom_left_price, .container_bottom_left_publishing-com, .container_bottom_left_topic, .container_bottom_left_origin, .container_bottom_left_language {
+    margin: 0 0 10px 10px;
+}
+
+.container_bottom_left_product, .container_bottom_left_price, .container_bottom_left_publishing-com, .container_bottom_left_topic, .container_bottom_left_origin, .container_bottom_left_language > p {
+    font-size: 15px;
+} 
+
+.vanhoc > ul li{
+    list-style: none;
+    text-align: left;
+}
+
+.vanhoc > ul,li, a {
+    text-decoration: none;
+    color: black;
+}
+
+.vanhoc > ul li:first-child{
+    margin-left: 10px;
+}
+
+.container_bottom_right {
+    padding: 4px;
+    background-color: #EEEEEE;
+    width: 100%;
+    margin-right: 100px;
+}
+
+.container_bottom_right_top {
+    padding: 5px;
+}
+
+.time {
+    width: 150px;
+    height: 40px;
+    border: 1px solid grey;
+    margin-left: 14px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.time > .time_option:hover {
+    background-color: aqua;
+}
+
+.container_bottom_right_bottom {
+    width: 100%;
+}
+
+.number_page {
+    margin: 10px 0px 0px 400px;
+    width: 50px;
+}
+
+.page-link {
+    color: black;
+}

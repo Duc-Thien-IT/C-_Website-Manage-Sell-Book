@@ -1,0 +1,138 @@
+﻿@media (max-width: 500px)
+{
+    .form-group i.fas {
+        left: 5px;
+    }
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:460px;
+    padding: 20px; 
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: rgba(246, 243, 243, 0.844);
+    margin-top: 50px;
+}
+
+
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #555;
+    text-align: center;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group input[type="password"] {
+    width: 400px;
+    max-width: 450px;
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding-left: 35px;
+
+}
+
+        .form-group input[type="text"]:hover,
+        .form-group input[type="email"]:hover,
+        .form-group input[type="date"]:hover,
+        .form-group input[type="password"]:hover {
+            border-color: #999;
+            box-shadow: 0 0 1px 1px rgba(47, 45, 45, 0.3);
+        }
+
+    .btn {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #555;
+        color: #fff;
+        cursor: pointer;
+        transition: border-color 0.3s;
+    }
+
+        .btn:hover {
+            background-color: #999;
+            box-shadow: 0 0 5px 3px rgba(47, 45, 45, 0.3);  Add box-shadow property for glowing effect 
+        }
+
+
+    .link {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+        .link a {
+            color: #555;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+            .link a:hover {
+                text-decoration: underline;
+            }
+
+     
+.form-group input[type="text"] + i.fas,
+.form-group input[type="email"] + i.fas,
+.form-group input[type="password"] + i.fas,
+.form-group input[type="date"] + i.fas {
+    color: #999;
+}
+
+.form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;  Thay đổi hướng của flex container 
+    align-items: flex-start;  Căn chỉnh các phần tử con theo chiều ngang 
+    
+}
+
+    .form-group i.fas 
+    {
+        position: absolute;
+        top: 30%;
+        left: 10px;
+        transform: translateY(-50%);
+        color: #666;
+    }
+.error-message {
+    color: red;
+    font-size: 13px;
+    display: block;
+    
+}
+
+
+#close-btn {
+    position: absolute;
+    top: 10px;
+    right: 17px;
+    margin: 10px;
+    padding: 5px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #555;
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+}

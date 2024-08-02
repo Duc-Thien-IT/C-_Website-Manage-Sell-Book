@@ -1,0 +1,47 @@
+﻿@model demo2.Models.Sach
+
+@{
+    ViewBag.Title = "XemChiTiet";
+    Layout = "~/Views/Layout/_Mainpage.cshtml";
+}
+<section class="content" >
+    <div class="product row">
+        <div class="col">
+            <img src="~/HinhAnhSP/@Html.DisplayFor(model => model.AnhBia)" />
+        </div>
+        <div class="col">
+            <h4>Tên sách: @Html.DisplayFor(model => model.TenSach)</h4>
+            <hr>
+            <p>Giá: @Html.DisplayFor(model => model.GiaBan)Đ</p>
+            <p>Số lượng tồn: @Html.DisplayFor(model => model.SoLuongTon)</p>
+            <p>Chủ đề: @Html.DisplayFor(model => model.ChuDe.TenChuDe)</p>
+            <p>Nhà xuất bản: @Html.DisplayFor(model => model.NhaXuatBan.TenNXB)</p>
+            <hr>
+            <div class="row">
+                <div class="btn_buy" style="margin-left: 10%; margin-bottom:10px;">
+                    <a href="@Url.Action("ThemGioHang", "GioHang", new { @ms = Model.MaSach, @strURl = Request.Url.ToString() })">
+                <div class="btn_buy" style="margin-left: 10%; margin-bottom:10px;">
+                        <input type="submit" value="MUA HÀNG" class="btn btn-danger" style="font-size: 18px; font-weight: bold;"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    </a>
+                    <a href="@Url.Action("Index","Home")">
+                        <input type="submit" value="MUA TIẾP" class="btn btn-danger" style="font-size: 18px; font-weight: bold;"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin: 15px 0 15px 2px ;background-color: antiquewhite; width: 100%; padding: 8px;">
+        <div class="col-12">
+            <h5>Thông tin về sách</h5>
+            <p style="font-size: 16px;">
+                Mô tả: @Html.DisplayFor(model => model.MoTa)
+            </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .content {
+        margin-top: 22px;
+    }
+</style>

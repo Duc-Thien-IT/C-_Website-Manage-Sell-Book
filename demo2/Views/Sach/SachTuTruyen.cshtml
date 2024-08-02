@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/_Mainpage.cshtml";
+}
+
+@using demo2.Models;
+@model List<Sach>
+<div class="content_important">
+    <div class="my-2 ms-3 me-2">
+        <div class="row bg-danger border border-0 rounded-2">
+            
+            <div class="my-3">
+                <div class="row row-cols-1 row-cols-md-5 g-3">
+                    @{
+                        foreach (var item in Model)
+                        {
+                            <div class="col">
+                                <div class="card h-100">
+                                    <a href="@Url.Action("XemChiTiet", new { @ms=item.MaSach })"><img src="@Url.Content("~/HinhAnhSP/" + item.AnhBia)" alt="Image" /></a>
+                                    <div class="card-body card_lor">
+                                        <a href="@Url.Action("XemChiTiet", new { @ms=item.MaSach })">
+                                            @if (item.TenSach.Length > 30)
+                                            {
+                                                <h5 class="card-title">@item.TenSach.Substring(0, 30)</h5>
+                                                <p class="card-text">@string.Format("{0:0,0}", item.GiaBan)</p>
+                                            }
+                                            else
+                                            {
+                                                <h5 class="card-title">@item.TenSach</h5>
+                                                <p class="card-text">@string.Format("{0:0,0}", item.GiaBan)</p>
+                                            }
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*<div class="PageList">
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+    </div>
+
+        <style>
+            .pageList > ul li{
+                display: flexbox;
+                width: 100%;
+            }
+
+            .pagination-container{
+                width: 200px;
+                /*align-items: center;
+                text-align: center;*/
+                margin: 2px auto;
+            }
+
+            .pagination > li a {
+                font-size: 18px;
+                color: #333;
+            }
+
+            .pagination > .active{
+                color: red;
+            }
+        </style>*@
+

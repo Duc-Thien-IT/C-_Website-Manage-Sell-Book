@@ -1,0 +1,96 @@
+﻿@model demo2.Models.KhachHang
+
+@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/Layout/DangKy.cshtml";
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="@Url.Content("~/assets/maincss/account.css")">
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <div class="wrapper">
+        <div class="form-container sign-up" style="margin-top: 30vh;">
+            <form action="#">
+                <h2>Đăng Ký</h2>
+
+                <div class="form-group">
+
+                    <i class="fas fa-user"></i>
+                    @Html.TextBox("HoTenKH", null, new { placeholder = "Họ và Tên" })
+                    <h3 class="error-message">@ViewData["Loi1"]</h3>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    @Html.TextBox("TenDN", null, new { placeholder = "Tên tài khoản" })
+                    <h3 class="error-message">@ViewData["Loi2"]</h3>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    @Html.Password("MatKhau", null, new { placeholder = "Mật khẩu" })
+                    <h3 class="error-message">@ViewData["Loi3"]</h3>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-lock"></i>
+                    @Html.Password("NhapLaiMatKhau", null, new { placeholder = "Xác nhận mật khẩu" })
+                    <h3 class="error-message">@ViewData["Loi4"]</h3>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-phone"></i>
+                    @Html.TextBox("DienThoai", null, new { placeholder = "SĐT" })
+                    <h3 class="error-message">@ViewData["Loi5"]</h3>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-calendar-days"></i>
+                    <input type="date" name="NgaySinh">
+                </div>
+
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="Email">
+                </div>
+
+                <div class="form-group">
+                    <i class="fas fa-location-dot"></i>
+                    @Html.TextBox("DiaChi", null, new { placeholder = "Địa chỉ" })
+                </div>
+
+                <button type="submit" class="btn">Đăng Ký</button>
+                <div class="link">
+                    <p>Bạn đã có tài khoản? <a href=@Url.Action("DangNhap","Home") class="signin-link"> Đăng Nhập</a></p>
+                    <h4 style="color: red; text-align: center; font-size: 15px;">@ViewBag.ThongBao</h4>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/9e5ba2e3f5.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    @*<script>
+        document.getElementById("close-btn").addEventListener("click", function () {
+            Swal.fire({
+                title: "Bạn có muốn thoát không?",
+                icon: "question",
+                showCancelButton: true,
+                confirmButtonText: "Yes",
+                cancelButtonText: "No",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    document.querySelector(".form-container").style.display = "none";
+        }
+        });
+        });
+    </script>*@
+}
+
+<style>
+    body
+    {
+        background-color: #009999;
+    }
+
+</style>

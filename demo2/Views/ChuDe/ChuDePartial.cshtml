@@ -1,0 +1,11 @@
+﻿@model IEnumerable<demo2.Models.ChuDe>
+
+<ul id="sub_menu">
+    @foreach (var item in Model)
+    {
+        <li class="list-group-item">
+            @*@item.TenChuDe*@
+            <a href="~/Sach/SachTheoChuDe?macd=@item.MaChuDe">@item.TenChuDe</a>
+        </li>
+    }
+</ul>

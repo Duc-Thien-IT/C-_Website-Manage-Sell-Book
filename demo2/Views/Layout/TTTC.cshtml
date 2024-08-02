@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+    </script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>BookStore.com</title>
+    <link rel="stylesheet" href="~/assets/maincss/footer.css">
+    <link rel="stylesheet" href="~/assets/maincss/index.css">
+    <link rel="stylesheet" href="~/assets/maincss/cart.css">
+    <link rel="stylesheet" href="~/assets/maincss/account.css">
+    <link rel="stylesheet" href="~/assets/font-aws/fontawesome/css/all.css">
+</head>
+
+<body class="bg-body-secondary">
+    <div id="header" class="bg-light" style="margin-bottom: 20px; color: transparent; background-color: transparent;">
+        <div id="header_banner">
+            <img src="~/assets/img/index/FahasaSaleT3_W3_T823_Banner_Header_1263x60.jpg" class="img-fluid h-100 w-100">
+        </div>
+        <div id="header__bottom" class="row">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-8 col-sm-8 mx-5">
+                                <a href="~/Home/Index"><img src="~/assets/img/index/logo.png" alt="logo" class="img-fluid w-75 h-100 "></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        @using (Html.BeginForm("KetQuaTimKiem", "Search", FormMethod.Post))
+                        {
+                            <div class="row">
+                                <form class="d-flex" role="search" style="height: 60px;">
+                                    @*<input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search" name="txtTimKiem">*@
+                                    @Html.TextBox("txtTimKiem", "", htmlAttributes: new { @class = "form-control me-2", @placeholder = "Tìm kiếm", @style = "width: 80%;" })
+                                    <button class="btn btn-danger" style="width: 15%;" type="submit"><img src="~/assets/icon/search.svg"></button>
+                                </form>
+                            </div>
+                        }
+                    </div>
+                    <div class="col mx-auto p-1" id="header__bottom__right">
+                        <nav class="navbar navbar-expand-lg">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <img src="~/assets/icon/bell.svg"> <br>
+                                        Thông báo
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="~/GioHang/GioHang">
+                                        <img src="~/assets/icon/shopping-cart.svg"> <br>
+                                        Giỏ hàng
+                                    </a>
+                                </li>
+                                <li class="nav-item acc">
+                                    <a class="nav-link" href="~/Home/DangNhap">
+                                        <img src="~/assets/icon/user.svg"> <br>
+                                        Tài khoản
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------Content ------------------------------>
+    @RenderBody()
+
+    <footer class="footer" style="margin-top: 3vh;">
+        <div class="footer-left">
+            <img src="~/assets/img/index/logo.png">
+            <p>
+                Lầu 5, 387-389 Hai Bà Trưng Quận 3 TP HCM <br>Công Ty Cổ Phần Phát Hành Sách TP HCM - FAHASA<br>60 - 62 Lê Lợi,
+                Quận 1, TP. HCM, Việt Nam <br> Fahasa.com nhận đặt hàng trực tuyến và giao hàng tận nơi.<br> KHÔNG hỗ trợ đặt
+                mua và nhận hàng trực tiếp tại văn phòng cũng như tất cả Hệ Thống Fahasa trên toàn quốc.
+            </p>
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-solid fa-truck-fast"></i></a>
+            </div>
+        </div>
+        <ul class="footer-right">
+            <li>
+                <h5>DỊCH VỤ</h5>
+                <ul class="box">
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                    <li><a href="#">Chính sách bảo mật thông tin</a></li>
+                    <li><a href="#">Chính sách bảo mật thanh toán</a></li>
+                    <li><a href="#">Hệ thống trung tâm - nhà sách</a></li>
+                </ul>
+            </li>
+            <li>
+                <h5>HỖ TRỢ</h5>
+                <ul class="box">
+                    <li><a href="#">Chính sách bảo hành - bồi hoàn</a></li>
+                    <li><a href="#">Chính sách đổi trả - hoàn tiền</a></li>
+                    <li><a href="#">Chính sách vận chuyển</a></li>
+                    <li><a href="#">Chính sách thanh toán</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <h5>LIÊN HỆ</h5>
+                <ul class="box">
+                    <li><a href="#"><i class="fa-solid fa-phone"></i> 01122023</a></li>
+                    <li><a href="#"><i class="fa-solid fa-envelope"></i> cskh@fahasa.com</a></li>
+                    <li><a href="#"><i class="fa-solid fa-location-dot"></i> 413 Lê Văn Quới, Q.BT, TPHCM</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="footer-bottom">
+            <p>
+                Giấy chứng nhận Đăng ký Kinh doanh số 0304132047 do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp ngày
+                20/12/2005, đăng ký thay đổi lần thứ 10, ngày 20/05/2022.
+            </p>
+        </div>
+    </footer>
+    <script src="assets/mainjs/btn_bonus.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let btn = document.getElementById("btnMode");
+        let btnIcon = document.getElementById("btnIcon");
+        btn.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                btnIcon.src = "~/assets/img/themes/sun-reading.svg";
+            }
+            else {
+                btnIcon.src = "~/assets/img/themes/moon-reading.svg";
+            }
+        }
+    </script>
+</body>
+
+</html>

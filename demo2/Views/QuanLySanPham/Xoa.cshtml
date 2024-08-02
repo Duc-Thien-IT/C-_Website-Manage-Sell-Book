@@ -1,0 +1,54 @@
+﻿@model demo2.Models.Sach
+
+@{
+    ViewBag.Title = "Xoa";
+    Layout = "~/Views/Layout/_Layout_Admin.cshtml";
+}
+
+<div style="margin-bottom: 20px;">
+    <hr />
+    <h3 style="text-align: center;">THÔNG TIN SÁCH</h3>
+</div>
+<section class="content">
+    <div class="product row">
+        <div class="col">
+            <img src="~/HinhAnhSP/@Html.DisplayFor(model => model.AnhBia)" />
+        </div>
+        <div class="col">
+            <h4>Tên sách: @Html.DisplayFor(model => model.TenSach)</h4>
+            <hr>
+            <p>Giá: @Html.DisplayFor(model => model.GiaBan)Đ</p>
+            <p>Số lượng tồn: @Html.DisplayFor(model => model.SoLuongTon)</p>
+            <p>Chủ đề: @Html.DisplayFor(model => model.MaChuDe)</p>
+            <p>Nhà xuất bản: @Html.DisplayFor(model => model.MaNXB)</p>
+            <hr>
+        </div>
+    </div>
+    <div class="row" style="margin: 15px 0 15px 2px ;background-color: antiquewhite; width: 100%; padding: 8px;">
+        <div class="col-12">
+            <h5>Thông tin về sách</h5>
+            <p style="font-size: 16px;">
+                Mô tả: @Html.DisplayFor(model => model.MoTa)
+            </p>
+        </div>
+    </div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="XÓA SÁCH" class="btn btn-danger" style="margin-left: 500px; font-size:18px;" />
+        </div>
+    }
+</section>
+<div class="back" style="margin-left: 20px; ">
+    @Html.ActionLink("Quay lại", "Index")
+</div>
+<style>
+    .table {
+        padding: 12px;
+    }
+    .back > a {
+        font-weight: bold;
+    }
+</style>

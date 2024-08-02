@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "SuaGioHang";
+    Layout = "~/Views/Layout/_Mainpage.cshtml";
+}
+
+@using demo2.Models;
+@model List<GioHang>
+
+<div class="cart_real">
+    <h3>GIỎ HÀNG</h3>
+    <div class="card border-dark">
+        <table class="table">
+            <tr style="background-color:lightgreen">
+                <th>Mã sách</th>
+                <th>Tên sách</th>
+                <th>Ảnh bìa</th>
+                <th>Số lượng</th>
+                <th>Đơn giá</th>
+                <th>Thành tiền</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td width="5%">@item.iMaSach</td>
+                    <td width="18%"><a style="color: #333;" href="@Url.Action("XemChiTiet", "Sach", new { @ms= item.iMaSach })">@item.sTenSach</a></td>
+                    <td width="14%"><a href="@Url.Action("XemChiTiet", "Sach", new { @ms= item.iMaSach })"><img src="~/HinhAnhSP/@item.sAnhBia" width="20%" style="float: left;" /></a></td>
+                    @using (Html.BeginForm("CapNhatGioHang", "GioHang", new { @masp = item.iMaSach }))
+                    {
+                        <td width="7%"><input type="number" min="1" name="txtSoLuong" value="@item.iSoLuong" style="width: 80px;" /></td>   
+                        <td width="12%">@string.Format("{0:0,0}", item.dDonGia)</td>
+                        <td width="16%">@string.Format("{0:0,0}", item.dThanhTien)</td>
+                        <td width="5%"><a href="@Url.Action("XoaGioHang", "GioHang", new { @masp= item.iMaSach })"><i class="fa-solid fa-trash" style="color: #333;"></i></a></td>
+                        <td width="5%"><input type="submit" value="Cập nhật" style="padding: 3px;" /></td>
+                    }
+                </tr>
+                <tr style="background-color: lightgreen">
+                    <td colspan="3" style="color: blue; font-weight:bold; text-align: right;">Tổng cộng: </td>
+                    <td style="color:red; font-weight: bold">@ViewBag.TongSoLuong</td>
+                    <td> </td>
+                    @*<td style="color:red; font-weight: bold">@string.Format("{0:0,0}", ViewBag.TongThanhTien) VNĐ</td>*@
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,248 @@
+.cart {
+    padding: 100px 0px;
+    border-bottom: 2px solid #333;
+}
+
+.cart-top-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-top {
+    height: 2px;
+    width: 70%;
+    background-color: #dddddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px auto;
+}
+
+.cart-top-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.cart-top-item i {
+    color: #dddddd;
+}
+
+.cart-top-cart {
+    border: 1px solid #0DB7EA;
+}
+
+.cart-top-cart i{
+    color: #0DB7EA;
+}
+
+.cart-content-left {
+    flex: 2;
+    padding-right: 12px;
+}
+
+.cart-content-left table {
+    width: 100%;
+    text-align: center;
+
+}
+
+.cart-content-left table th{
+    padding-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #333;
+    border-collapse: collapse;
+    border-bottom: 2px solid #dddddd;
+}
+
+.cart-content-left table p {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+.cart-content-left table input {
+    width: 30px;
+}
+
+.cart-content-left table span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+}
+
+.cart-content-left table td {
+    padding: 20px 0;
+    border-bottom: 2px solid #dddddd;
+}
+
+.cart-content-left td:first-child img{
+    width: 150px;
+    height: 200px;
+    margin-top: 5px;
+}
+
+.cart-content-left td:nth-child(2) {
+    max-width: 130px;
+}
+
+.cart-content-left td:nth-child(3) img{
+    width: 30px;
+}
+
+.cart-content-right {
+    flex: 1;
+    padding-left: 12px;
+    border-left: 2px solid #dddddd;
+}
+
+.cart-content-right table {
+    width: 100%;
+}
+
+.cart-content-right table th{
+    padding-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #333;
+    border-collapse: collapse;
+    border-bottom: 2px solid #dddddd;
+}
+
+.cart-content-right table td{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #333;
+    padding: 6px 0;
+}
+
+.cart-content-right tr:nth-child(4) td{
+    border-bottom: 2px solid #dddddd;
+}
+
+.cart-content-right tr td:last-child {
+   text-align: left; 
+}
+
+.cart-content-right-text {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.cart-content-right-text p {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+.cart-content-right-button {
+    text-align: center;
+    align-items: center;
+}
+
+.cart-content-right-button button {
+    padding: 0 18px;
+    height: 37px;
+    cursor: pointer;
+}
+
+.cart-content-right-button button:first-child {
+    background-color: #fff;
+    border: 1px solid black;
+    margin-right: 20px;
+}
+
+.cart-content-right-button button:first-child:hover {
+    background-color: #ddd;
+}
+
+.cart-content-right-button button:last-child {
+    background-color: black;
+    color: #fff;
+    border: 1px solid black;
+}
+
+.cart-content-right-button button:last-child:hover {
+    background-color: #dddddd;
+    color: #333;
+}
+
+.cart-content-right-buttom-login {
+    margin-top: 25px;
+}
+
+.cart-content-right-buttom-login {
+    font-size: 14px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*=========================================================*/
+/*Cart null*/
+.cart-null{
+    width: 100%;
+    min-height: 50vh;
+    background-color: #009999;
+    margin:15px auto;
+    display: flex;
+    border-radius: 15px;
+}
+
+.cart-null-logo {
+    margin: 50px auto;
+}
+
+.cart-null-logo > .icon {
+    font-size: 95px;
+    text-align: center;
+    align-items: center;
+    color: #333;
+    margin-left: 90px;
+}
+
+.cart-null-logo > span {
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: red;
+    color: #ffffff;
+    padding: 6px;
+    cursor: pointer;
+    margin-left: 65px;
+    margin-top: 05px;
+}
+
+.cart-null-logo > span a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/*-----------------Cart_real----------------------------*/
+.cart_real {
+    width: 100%;
+    background-color: #009999;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 16px;
+}
+
+h3{
+    color: white;
+    text-align: center;
+    margin-top:10px;
+    font-weight: bold;
+}
+

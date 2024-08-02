@@ -1,0 +1,53 @@
+﻿@model IEnumerable<demo2.Models.NhaXuatBan>
+
+<ul id="sub_menu">
+    @foreach (var item in Model)
+    {
+        <li class="list-group-item">
+            @*@item.TenNXB*@
+            <a href="~/Sach/SachTheoNXB?manxb=@item.MaNXB">@item.TenNXB</a>
+        </li>
+    }
+</ul>
+
+@*@{
+    ViewBag.Title = "SachPartial";
+    Layout = "~/Views/Layout/_Mainpage.cshtml";
+}
+
+@using demo2.Models;
+@model List<Sach>
+
+<div class="content_important">
+    <div class="my-5 ms-3 me-2">
+        <div class="row bg-primary border border-0 rounded-2">
+            <div class="my-2">
+                <img src="~/assets/img/index/Asset 2@2x.png" class="border rounded-2 border-0">
+            </div>
+            <div class="my-3">
+                <div class="row row-cols-1 row-cols-md-5 g-3">
+                    @{
+                        foreach (var item in Model)
+                        {
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="@Url.Content("~/HinhAnhSP/" + item.AnhBia)" alt="Image" />
+                                    <div class="card-body card_lor">
+                                        <a href="#">
+                                            <h5 class="card-title">@item.TenSach</h5>
+                                            <p class="card-text">411.000Đ</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+
+
+

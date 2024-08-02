@@ -1,0 +1,38 @@
+D:\Hufi\NAM 3\Lập trình Web\Project\demo2\demo2\bin\demo2.dll.config
+D:\Hufi\NAM 3\Lập trình Web\Project\demo2\demo2\bin\demo2.dll
+D:\Hufi\NAM 3\Lập trình Web\Project\demo2\demo2\bin\demo2.pdb
+D:\Hufi\NAM 3\Lập trình Web\Project\demo2\demo2\bin\System.Web.Helpers.dll
+D:\Hufi\NAM 3\Lập trình Web\Project\demo2\demo2\bin\System.Web.Mvc.dll
+D:\Hufi\NAM 3\Lập trình Web\Project\demo2\demo2\bin\System.Web.Razor.dll
+D:\Hufi\NAM 3\Lập trình Web\Project\demo2\demo2\bin\System.Web.Webpages.Deployment.dll
+D:\Hufi\NAM 3\Lập trình Web\Project\demo2\demo2\bin\System.Web.Webpages.dll
+D:\Hufi\NAM 3\Lập trình Web\Project\demo2\demo2\bin\System.Web.Webpages.Razor.dll
+D:\Hufi\NAM 3\Lập trình Web\Project\demo2\demo2\bin\System.Web.Razor.xml
+D:\Hufi\NAM 3\Lập trình Web\Project\demo2\demo2\bin\System.Web.Webpages.xml
+D:\Hufi\NAM 3\Lập trình Web\Project\demo2\demo2\bin\System.Web.Webpages.Deployment.xml
+D:\Hufi\NAM 3\Lập trình Web\Project\demo2\demo2\bin\System.Web.Webpages.Razor.xml
+D:\Hufi\NAM 3\Lập trình Web\Project\demo2\demo2\bin\System.Web.Helpers.xml
+D:\Hufi\NAM 3\Lập trình Web\Project\demo2\demo2\bin\System.Web.Mvc.xml
+D:\Hufi\NAM 3\Lập trình Web\Project\demo2\demo2\obj\Debug\demo2.csprojResolveAssemblyReference.cache
+D:\Hufi\NAM 3\Lập trình Web\Project\demo2\demo2\obj\Debug\demo2.dll
+D:\Hufi\NAM 3\Lập trình Web\Project\demo2\demo2\obj\Debug\demo2.pdb
+C:\Users\Admin\Documents\demo2\demo2\bin\demo2.dll.config
+C:\Users\Admin\Documents\demo2\demo2\bin\demo2.dll
+C:\Users\Admin\Documents\demo2\demo2\bin\demo2.pdb
+C:\Users\Admin\Documents\demo2\demo2\bin\System.Web.Helpers.dll
+C:\Users\Admin\Documents\demo2\demo2\bin\System.Web.Mvc.dll
+C:\Users\Admin\Documents\demo2\demo2\bin\System.Web.Razor.dll
+C:\Users\Admin\Documents\demo2\demo2\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Admin\Documents\demo2\demo2\bin\System.Web.Webpages.dll
+C:\Users\Admin\Documents\demo2\demo2\bin\System.Web.Webpages.Razor.dll
+C:\Users\Admin\Documents\demo2\demo2\bin\System.Web.Razor.xml
+C:\Users\Admin\Documents\demo2\demo2\bin\System.Web.Webpages.xml
+C:\Users\Admin\Documents\demo2\demo2\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Admin\Documents\demo2\demo2\bin\System.Web.Webpages.Razor.xml
+C:\Users\Admin\Documents\demo2\demo2\bin\System.Web.Helpers.xml
+C:\Users\Admin\Documents\demo2\demo2\bin\System.Web.Mvc.xml
+C:\Users\Admin\Documents\demo2\demo2\obj\Debug\demo2.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\demo2\demo2\obj\Debug\demo2.dll
+C:\Users\Admin\Documents\demo2\demo2\obj\Debug\demo2.pdb
+C:\Users\Admin\Documents\BaiTap\ASP.NET\DOAN_LTW_Nhom12\demo2\obj\Debug\demo2.dll
+C:\Users\Admin\Documents\BaiTap\ASP.NET\DOAN_LTW_Nhom12\demo2\obj\Debug\demo2.pdb

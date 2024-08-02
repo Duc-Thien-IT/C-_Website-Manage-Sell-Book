@@ -1,0 +1,11 @@
+﻿@model IEnumerable<demo2.Models.TacGia>
+
+<ul id="sub_menu">
+    @foreach (var item in Model)
+    {
+        <li class="list-group-item">
+            @*@item.TenTacGia*@
+            <a href="~/Sach/SachTheoTG?matg=@item.MaTacGia">@item.TenTacGia</a>
+        </li>
+    }
+</ul>

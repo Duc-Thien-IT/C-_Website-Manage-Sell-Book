@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>BookStore.com</title>
+    <link rel="stylesheet" href="~/assets/maincss/footer.css">
+    <link rel="stylesheet" href="~/assets/maincss/index.css">
+    <link rel="stylesheet" href="~/assets/maincss/cart.css">
+    <link rel="stylesheet" href="~/assets/font-aws/fontawesome/css/all.css">
+</head>
+
+<body class="bg-body-secondary">
+   
+    <div id="header" class="bg-light">
+        @RenderPage("~/Views/Layout/Header.cshtml")
+    </div>
+    <!--------------Content ------------------------------>
+    <div class="container">
+        <div id="content_top" class="row">
+            <div id="nav_content">
+                <div id="menu">
+                    <ul>
+                        <li><a href="~/Home/Index">Trang Chủ</a></li>
+                        <li>
+                            <a href="">Thể Loại</a>
+                            @Html.Action("ChuDePartial", "ChuDe")
+                        </li>
+                   
+                        <li>
+                            <a href="">Nhà xuất bản</a>
+                            @Html.Action("NhaXuatBanPartial", "NhaXuatBan")
+                        </li>
+                        <li>
+                            <a href="~/Sach/SachHOT">HOT</a>
+                        </li>
+                        <li>
+                            <a href="">Tác giả</a>
+                            @Html.Action("TacGiaPartial", "TacGia")
+                        </li>
+                        @*<li><a href="~/Sach/SachVanHoc">Sách Văn Học</a></li>
+                        <li><a href="~/Sach/SachTuTruyen">Tự Truyện</a></li>*@
+                    </ul>
+                </div>
+            </div>
+            <div id="nav_content_banner">
+                <div id="carouselExampleIndicators" class="carousel slide ms-2" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/assets/img/index/FahasaSaleT3_W3_T823_ldp_BannerTuanLeSinhNhat_1200x523.jpg" class="d-block w-100"
+                                 alt="sale1" height="506px">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/assets/img/index/FahasaSaleT3_W3_T823_ldp_BannerX5_1200x546.jpg" class="d-block w-100" height="506px"
+                                 alt="sale2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/assets/img/index/slider_2.jpg" class="d-block w-100" alt="sale3" height="506px">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        @RenderBody()
+    </div>
+
+    @RenderPage("~/Views/Layout/Footer.cshtml")
+    <script src="assets/mainjs/btn_bonus.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+    let btn = document.getElementById("btnMode");
+    let btnIcon = document.getElementById("btnIcon");
+    btn.onclick = function () {
+      document.body.classList.toggle("dark-theme");
+      if (document.body.classList.contains("dark-theme")) {
+        btnIcon.src = "~/assets/img/themes/sun-reading.svg";
+      }
+      else {
+        btnIcon.src = "~/assets/img/themes/moon-reading.svg";
+      }
+    }
+    </script>
+</body>
+
+</html>
